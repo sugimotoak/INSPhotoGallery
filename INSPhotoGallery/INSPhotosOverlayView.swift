@@ -57,9 +57,7 @@ open class INSPhotosOverlayView: UIView , INSPhotosOverlayViewable {
     }
     var titleTextAttributes: [String : AnyObject] = [:] {
         didSet {
-            var convertedAttributes = Dictionary(uniqueKeysWithValues:
-                titleTextAttributes.lazy.map { (NSAttributedStringKey($0.key), $0.value) })
-            navigationBar.titleTextAttributes = convertedAttributes
+            navigationBar.titleTextAttributes = titleTextAttributes
         }
     }
     
